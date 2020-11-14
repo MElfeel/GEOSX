@@ -68,6 +68,7 @@ geosx_osx_build: &geosx_osx_build
   - for dep in `brew deps open-mpi.rb`; do brew install $dep; done
   <<: *geosx_before_script
   script:
+  - echo ${GEOSX_TPL_DIR}
   - python ${TRAVIS_BUILD_DIR}/scripts/config-build.py
     -hc ${TRAVIS_BUILD_DIR}/host-configs/darwin-clang.cmake
     -DGEOSX_TPL_DIR=${GEOSX_TPL_DIR}
