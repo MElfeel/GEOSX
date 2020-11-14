@@ -1,3 +1,5 @@
+message(STATUS "GEOSX_TPL_DIR=${GEOSX_TPL_DIR}")
+
 #
 # Performance portability
 #
